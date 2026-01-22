@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Logo Hexagon "B" -->
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/ic_logo2"
+            android:contentDescription="Logo"/>
+
+
+        <!-- Label Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Your Email"
+            android:textColor="#0088FF"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Input Email -->
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/input_background"
+            android:hint="example@gmail.com"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:maxLines="1"/>
+
+        <!-- Label Password -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Your Password"
+            android:textColor="#0088FF"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Input Password with toggle -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/input_background"
+            android:layout_marginTop="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="48dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="********"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:paddingEnd="40dp"/>
+
+            <ImageButton
+                android:id="@+id/button_toggle_password"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Toggle Password Visibility"
+                android:src="@drawable/ic_eye_off" />
+        </RelativeLayout>
+
+        <!-- Pesan error -->
+        <TextView
+            android:id="@+id/text_error_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:text="Invalid email or password." />
+
+        <!-- Tombol Login -->
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#0088FF"
+            android:textStyle="bold"
+            android:background="@drawable/btn_rounded_blue"
+            android:enabled="false"/>
+
+        <!-- Text register -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doesn't have account? "
+                android:textColor="#777777"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/text_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="#0088FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

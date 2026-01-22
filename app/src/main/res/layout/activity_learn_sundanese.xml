@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Tombol Back -->
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="8dp"/>
+
+    <!-- Ilustrasi Sunda -->
+    <ImageView
+        android:id="@+id/image_sundanese_illustration"
+        android:layout_width="330dp"
+        android:layout_height="301dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Sundanese Illustration"
+        android:src="@drawable/illustration_sunda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back" />
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/text_learn_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Learn Sundanese"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2E2E2E"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/image_sundanese_illustration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container fitur -->
+    <LinearLayout
+        android:id="@+id/layout_features"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/text_learn_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <include
+            android:id="@+id/cardFeature"
+            layout="@layout/fitur_card_intro"/>
+
+        <include
+            android:id="@+id/cardFeature"
+            layout="@layout/fitur_card_grammar"/>
+
+        <include
+            android:id="@+id/cardFeature"
+            layout="@layout/fitur_card_vocabulary"/>
+        <!-- Cards akan ditambahkan secara dinamis via code -->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

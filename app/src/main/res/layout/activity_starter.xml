@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43A6F5"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Logo Hexagon "B" -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="256dp"
+        android:layout_height="259dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_logo2" /> <!-- Ganti dengan logo hexagon B -->
+
+
+    <!-- Card Informasi -->
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="250dp"
+android:background="#4EB1FF"
+android:layout_marginTop="32dp"
+android:gravity="center"
+android:padding="24dp"
+android:layout_marginBottom="24dp"
+android:layout_marginStart="8dp"
+android:layout_marginEnd="8dp"
+android:clipToPadding="false"
+android:clipChildren="false"
+android:backgroundTintMode="src_in"
+android:backgroundTint="#4EB1FF"
+android:shape="rectangle"
+android:elevation="6dp"
+android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+<View
+    android:layout_width="48dp"
+    android:layout_height="4dp"
+    android:background="#C9E6FF"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="26dp"
+    android:backgroundTintMode="src_in"
+    android:elevation="1dp"
+    android:backgroundTint="#C9E6FF"
+    android:shape="rectangle"
+    />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Learn the local language for free!"
+    android:textColor="#FFFFFF"
+    android:textSize="19sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginBottom="12dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Learn all local languages\ninteractively at your fingertips!"
+    android:textColor="#FFFFFF"
+    android:textSize="14sp"
+    android:gravity="center"
+    android:lineSpacingExtra="4dp"/>
+
+<!-- Indikator (bulat) -->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_active"
+        android:layout_marginEnd="8dp" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_inactive"
+        android:layout_marginEnd="8dp" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_inactive" />
+
+</LinearLayout>
+</LinearLayout>
+
+    <!-- Tombol Register & Login -->
+<LinearLayout
+android:orientation="horizontal"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:gravity="center"
+android:weightSum="2">
+
+<Button
+    android:id="@+id/button_register"
+    android:layout_width="140dp"
+    android:layout_height="48dp"
+    android:layout_weight="1"
+    android:text="Register"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/button_register_bg"
+    android:textStyle="bold"
+    android:layout_marginEnd="12dp"/>
+
+<Button
+    android:id="@+id/button_login"
+    android:layout_width="140dp"
+    android:layout_height="48dp"
+    android:layout_weight="1"
+    android:text="Login"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/button_login_bg"
+    android:textStyle="bold"/>
+
+</LinearLayout>
+    </LinearLayout>

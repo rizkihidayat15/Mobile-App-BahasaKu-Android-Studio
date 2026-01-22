@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#42A5F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+
+    <!-- Container putih -->
+
+    <!-- Bottom Navigation -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="Hi, John!"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="What local language would you like to learn?"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/imgHeaderIllustration"
+        android:layout_width="439dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Learning Illustration"
+        android:scaleType="fitCenter"
+        android:src="@drawable/illustration_learning" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Language Being Learned"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Sundanese -->
+        <include
+            android:id="@+id/cardSundanese"
+            layout="@layout/item_language_sundanese" />
+
+        <!-- Balinese -->
+        <include
+            android:id="@+id/cardBalinese"
+            layout="@layout/item_language_balinese" />
+
+        <!-- Aceh -->
+        <include
+            android:id="@+id/cardAceh"
+            layout="@layout/item_language_aceh" />
+
+        <!-- Javanese -->
+        <include
+            android:id="@+id/cardJavanese"
+            layout="@layout/item_language_javanese" />
+
+        <!-- Betawi -->
+        <include
+            android:id="@+id/cardBetawi"
+            layout="@layout/item_language_betawi" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</LinearLayout>

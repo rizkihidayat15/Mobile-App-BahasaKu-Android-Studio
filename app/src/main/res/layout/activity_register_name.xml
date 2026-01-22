@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- Tombol Back (Icon) di kiri atas -->
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow_back"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:elevation="4dp"
+    android:padding="8dp"
+    android:layout_marginTop="8dp"/>
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your name?"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#202A44"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"/>
+
+    <!-- Input nama -->
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/text_title"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/input_name_background"
+        android:hint="John Doe"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:maxLines="1"/>
+
+    <!-- Tombol Next -->
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/input_name"
+        android:layout_marginTop="24dp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0088FF"
+        android:textStyle="bold"
+        android:background="@drawable/btn_rounded_blue"/>
+</RelativeLayout>
